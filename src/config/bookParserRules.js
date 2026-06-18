@@ -84,9 +84,9 @@ function calculateFacetScore(descriptionText, keywordArray) {
 }
 
 export const CRITERIA_SCORERS = {
-    object.keys(TONES_DICTIONARY).forEach((toneName) => {
+    Object.keys(TONES_DICTIONARY).forEach((toneName) => {
         CRITERIA_SCORERS[toneName] = (apiItem) => {
-            return calculateToneScore(apiItem.volumeInfo?.description,TONES_DICTIONARY[toneName]);
+            return calculateToneScore(apiItem.volumeInfo?.description, TONES_DICTIONARY[toneName]);
         }
     })
 

@@ -55,5 +55,9 @@ export function findThreeDiverseRecommendations(scoredBooks) {
         return bToneSum - aToneSum;
     })[0];
 
-    const structuralPool = remainingBooks
+    const structuralPool = remainingBooks.filter(b => b.id !== toneMatch.id);
+
+    const structuralKeys = ["pacing", "subjectInternal", "subjectExternal", "subjectSpeculative", "subjectHistorical"];
+
+    const structuralMatch
 }
